@@ -1,0 +1,27 @@
+# --- JAVA & MAVEN ---
+target/
+!.mvn/wrapper/maven-wrapper.jar
+*.class
+HELP.md
+
+# --- SÉCURITÉ : Fichiers de configuration (Secrets Google) ---
+# On ignore les vrais fichiers qui contiennent tes clés
+application.properties
+application.yml
+
+# --- IDE (IntelliJ, VS Code, STS) ---
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated
+.sts4-cache
+
+# --- SYSTÈME ---
+.DS_Store
+Thumbs.db
