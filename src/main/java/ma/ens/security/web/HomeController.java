@@ -9,10 +9,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
+    /**
+     * Point d'entrée de l'application.
+     * Cette méthode renvoie simplement la vue 'index.html'.
+     */
+
     @GetMapping("/")
     public String home() {
         return "index";
     }
+
+
+    /**
+     * Gère l'affichage du profil après une authentification réussie.
+     * @param model : Objet permettant de passer des données à la vue Thymeleaf.
+     * @param user : Contient les informations (claims) récupérées depuis le jeton d'identité Google.
+     */
 
     @GetMapping("/profile")
     public String profile(Model model, @AuthenticationPrincipal OAuth2User user) {
